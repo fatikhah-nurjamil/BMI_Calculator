@@ -23,10 +23,8 @@ div {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 1px 1px 20px #2cd9df;
-
   border: 0.2rem solid blue;
   border-radius: 0.6rem;
-
   z-index: 1;
   overflow: hidden;
 }
@@ -97,4 +95,49 @@ div h2 {
 
 #btn:hover {
   box-shadow: 1px 1px 10px #00abf0;
+}
+
+/* Media Queries */
+/* Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+/* Tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  div {
+    width: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: #081b29;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 20px #2cd9df;
+    border: 0.2rem solid blue;
+    border-radius: 0.6rem;
+  }
+
+  #w,
+  #h {
+    width: 100%;
+  }
+
+  .content .text {
+    text-align: left;
+    margin-left: 0;
+  }
+}
+
+/* MMobile Phone */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
 }
