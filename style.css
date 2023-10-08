@@ -3,8 +3,14 @@ body {
   padding: 0;
   text-align: center;
   font-family: sans-serif;
-  background-image: linear-gradient(120deg, #fff, #ff6b6b);
+  background: #00abf0;
   min-height: 100vh;
+
+  background: url("/img/home.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
 }
 
 div {
@@ -12,19 +18,43 @@ div {
   position: absolute;
   top: 50%;
   left: 50%;
-  background-color: aqua;
+  background-color: #081b29;
   transform: translate(-50%, -50%);
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 1px 1px 20px #ff6b6b;
+  box-shadow: 1px 1px 20px #2cd9df;
+
+  border: 0.2rem solid blue;
+  border-radius: 0.6rem;
+
+  z-index: 1;
+  overflow: hidden;
 }
 
-h2 {
+.content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #112e42;
+  z-index: -1;
+  transition: 0.5s;
+}
+
+.content:hover::before {
+  width: 100%;
+}
+
+div h2 {
+  color: #ededed;
   font-size: 30px;
   font-weight: 600;
 }
 
 .text {
+  color: #ededed;
   text-align: left;
   margin-left: 150px;
 }
@@ -38,13 +68,13 @@ h2 {
   outline: none;
   border: none;
   background: none;
-  border-bottom: 1px solid #ff6b6b;
+  border-bottom: 1px solid #00abf0;
   width: 200ox;
 }
 
 #w:focus,
 #h:focus {
-  border-bottom: 2px solid #ff6b6b;
+  border-bottom: 2px solid #00abf0;
   width: 300px;
   transition: 0.5s;
 }
@@ -57,8 +87,7 @@ h2 {
   font-family: inherit;
   margin-top: 10px;
   border: none;
-  color: #fff;
-  background-image: linear-gradient(120deg, #fff, #ff6b6b);
+  background-image: blue;
   width: 150px;
   padding: 10px;
   border-radius: 30px;
@@ -67,10 +96,5 @@ h2 {
 }
 
 #btn:hover {
-  box-shadow: 1px 1px 10px #ff6b6b;
-}
-
-#info {
-  font-size: 12px;
-  font-family: inherit;
+  box-shadow: 1px 1px 10px #00abf0;
 }

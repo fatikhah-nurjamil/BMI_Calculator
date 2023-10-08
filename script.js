@@ -1,9 +1,19 @@
 function calculateBMI() {
-  var weight = document.getElementById("w").value;
-  var height = document.getElementById("h").value;
+  var weightInput = document.getElementById("w").value;
+  var heightInput = document.getElementById("h").value;
 
-  if (weight === "" || height === "") {
-    alert("Please enter both weight and height.");
+  // Memeriksa apakah input adalah angka
+  if (isNaN(weightInput) || isNaN(heightInput)) {
+    alert("Please enter valid weight and height.");
+    return;
+  }
+
+  var weight = parseFloat(weightInput);
+  var height = parseFloat(heightInput);
+
+  // Memeriksa apakah input kosong atau tidak valid
+  if (isNaN(weight) || isNaN(height) || weight <= 0 || height <= 0) {
+    alert("Please enter valid weight and height.");
     return;
   }
 
